@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "extends": ["@react-native-community", "prettier"],
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react-native/no-inline-styles": 0,
+    "prefer-template": 0,
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
+    "no-console": ["error"],
+    "react/no-did-update-set-state": 0,
+    "react/no-did-mount-set-state": 0,
+    "no-var": ["error"],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "curly": "warn"
+  }
+}

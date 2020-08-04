@@ -4,12 +4,6 @@ import { Context } from '../context/BlogContext';
 import BlogPostForm from '../components/BlogPostForm';
 
 const EditScreen = ({ navigation }) => {
-   console.log("-----------1---------");
-   console.log("---------2-----------");
-   console.log("---------2-----------");
-   console.log("---------2-----------");
-   console.log("-----------1---------");
-
   const id = navigation.getParam('id');
   const { state, editBlogPost } = useContext(Context);
 

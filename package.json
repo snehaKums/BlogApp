@@ -9,18 +9,6 @@
     "test": "jest",
     "lint": "eslint ."
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./src/*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
-      "eslint src/*.js --fix-dry-run",
-      "git add"
-    ]
-  },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "react": "16.13.1",
@@ -38,7 +26,7 @@
     "@babel/runtime": "7.11.0",
     "@react-native-community/eslint-config": "1.1.0",
     "babel-jest": "25.5.1",
-    "eslint": "^6.8.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "husky": "^4.2.5",
     "jest": "25.5.4",
@@ -46,6 +34,21 @@
     "metro-react-native-babel-preset": "0.59.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{ts,html,js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "react-native"
