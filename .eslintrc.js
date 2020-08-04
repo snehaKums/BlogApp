@@ -1,4 +1,9 @@
+//Path: /.eslintrc.js
+
 module.exports = {
-  root: true,
-  extends: '@react-native-community',
+  extends: ['airbnb'],
+  rules: {
+    'react/jsx-filename-extension': 'off',
+    //You can override any rules you want
+  },
 };
